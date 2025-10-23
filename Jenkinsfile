@@ -8,11 +8,10 @@ git branch: 'development', url: 'https://github.com/Sakhtar-8254/maven-web-appli
 stage('Build'){
 sh "$mavenHome/bin/mvn clean package"
 }
-/*sonarQube Report generation 
+//sonarQube Report generation 
 stage('SonarQube Report') {
 sh "$mavenHome/bin/mvn sonar:sonar"
     }
-*/
 //uploading artifact into nexus repo
 stage('uploading artifact'){
 sh "$mavenHome/bin/mvn deploy"    
